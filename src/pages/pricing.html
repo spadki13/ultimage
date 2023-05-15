@@ -1,0 +1,133 @@
+---
+layout: "base.html"
+description: "Here's Simply Stellar's pricing page"
+metaTitle: "Our Pricing"
+tagTitle: "Pricing"
+preloadCSS: "/css/pricing.css"
+permalink: "pricing/"
+eleventyNavigation:
+  key: Pricing
+  order: 300
+---
+
+<section id="int-hero">
+  <h1 id="home-h">We keep it simple.</h1>
+</section>
+
+<section id="plans">
+  <div class="cs-container">
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <p class="cs-item-p">
+          <span class="cs-topperone">Premium</span>
+        </p>
+        <p class="cs-text">
+          For businesses aiming to differentiate themselves from their competitors and stand out in the industry.
+        </p><br>
+        <svg width="15" height="15" viewBox="0 0 42 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M24.5 7.5C24.5 5.567 22.933 4 21 4C19.067 4 17.5 5.567 17.5 7.5H24.5ZM21 35L41.2073 0L0.792741 0L21 35Z"
+            fill="#f4a42d" />
+        </svg>
+      </li>
+      <li class="cs-item">
+        <p class="cs-item-p">
+          <span class="cs-topperone">Growth</span>
+        </p>
+        <p class="cs-text">
+          For startups and small businesses looking to invest in a website that looks and performs well.
+        </p><br>
+        <svg width="15" height="15" viewBox="0 0 42 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M24.5 7.5C24.5 5.567 22.933 4 21 4C19.067 4 17.5 5.567 17.5 7.5H24.5ZM21 35L41.2073 0L0.792741 0L21 35Z"
+            fill="#f4a42d" />
+        </svg>
+
+      </li>
+      <li class="cs-item">
+        <p class="cs-item-p">
+          <span class="cs-topperone">Essentials</span>
+        </p>
+        <p class="cs-text">
+          For all freelancers, sole-traders and solopreneurs looking to establish credibility within their industry.
+        </p><br>
+        <svg width="15" height="15" viewBox="0 0 42 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M24.5 7.5C24.5 5.567 22.933 4 21 4C19.067 4 17.5 5.567 17.5 7.5H24.5ZM21 35L41.2073 0L0.792741 0L21 35Z"
+            fill="#f4a42d" />
+        </svg>
+      </li>
+    </ul>
+  </div>
+</section>
+<section id="pricing">
+  <div class="cs-container">
+    <div class="cs-right">
+      <span class="cs-topper">Our Pricing Model -</span>
+      <h2 class="cs-title">One low monthly cost.</h2>
+      <p class="cs-text">
+        We offer a unique pricing model that won't weigh heavily on your finances, allowing you to focus on what matters most: growing your business.
+      </p>
+      <p class="cs-text">
+        Simply Stellar is genuinely invested and stands behind every business we work with. We succeed when the businesses we work with succeed.
+      </p>
+      <p class="cs-text">
+        We understand that as your business grows, you'll need to make changes to your website. In addition to security updates and hosting, we include all minor edits that you request at no extra cost.
+      </p>
+      <p class="cs-text">
+        We're so confident that you'll love your new website and our unique approach to development that we have no lock-in contract or minimum term. If you have a change of heart, you can cancel your service at any time, no questions asked.
+      </p>
+      <br><br>
+
+      <button data-open-modal>WIP</button>
+
+      <dialog data-modal>
+        <div class="modal-container">
+          <div class="inside-modal">
+            <h2 class="modal-title">A nice header with some info</h2>
+            <p class="modal-text">
+              This option is perfect for business owners that prefer to delegate the maintenance of their site to our developers. This plan covers unlimited minor edits to keep your site updated at no additional cost.
+            </p>
+        </div>
+        <button data-close-modal>Close</button>
+        </div>
+      </dialog>
+
+</section>
+<section id="pricing">
+  <div class="cs-container">
+    <div class="cs-left">
+      {% image './src/images/kobz2.png', 'checkingstuff', 'cs-picture
+      cs-picture1', 'lazy'%}
+    </div>
+    <div class="cs-right">
+      <span class="cs-topper">Premium Plan</span>
+      <h2 class="cs-title">Perfect for established businesses -</h2>
+      <p class="cs-text">
+        This option is perfect for business owners that prefer to
+        delegate the maintenance of their site to our developers. This plan
+        covers unlimited minor edits to keep your site updated at no
+        additional cost.
+      </p>
+      <br /><br />
+      <span class="cs-topper">Growth Plan</span>
+      <h2 class="cs-title">Ideal for businesses looking to expand -</h2>
+      <p class="cs-text">
+        This option is perfect for business owners that prefer to
+        delegate the maintenance of their site to our developers. This plan
+        covers unlimited minor edits to keep your site updated at no
+        additional cost.
+      </p>
+      <br /><br />
+      <span class="cs-topper">Essentials Plan</span>
+      <h2 class="cs-title">Great for freelancers & sole-traders -</h2>
+      <p class="cs-text">
+        This option is perfect for business owners that prefer to
+        delegate the maintenance of their site to our developers. This plan
+        covers unlimited minor edits to keep your site updated at no
+        additional cost.</p>
+    </div>
+  </div>
+  <div class="cs-container"><a href="/consultation" class="button-solid">Get Started</a></div>
+
+</section>

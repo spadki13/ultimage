@@ -1,0 +1,427 @@
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+    #pricing {
+      padding: clamp(1em, 1.5vw, 2em) 2rem;
+    }
+    #pricing .cs-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      row-gap: 4rem;
+      flex-direction: column;
+      padding-bottom: 1rem;
+    }
+
+    #pricing .cs-left {
+      /* scaling the font size with the view width */
+      font-size: min(2.31vw, .7em);
+      /* using ems so we can use font size to scale the whole section */
+      width: 35em;
+      height: 35em;
+      position: relative;
+    }
+    #pricing .cs-picture {
+      /* clips img tag corners */
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      
+    }
+    #pricing .cs-picture img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      /* makes image act like a background image */
+      object-fit: contain;
+     
+    }
+    #pricing .cs-picture1 {
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      align-items: center;
+      justify-content: center;
+      background-color: inherit;
+    }
+    #pricing .cs-right {
+      margin: auto;
+      max-width: 40.875rem;
+    }
+    #pricing .cs-topper {
+      font-size: var(--topperFontSize);
+      font-family: "Merriweather-Sans";
+      line-height: 1.2em;
+      text-transform: uppercase;
+      text-align: left;
+      font-weight: 500;
+      letter-spacing: .1em;
+      color: var(--primary);
+      margin-bottom: clamp(0.5rem, 1.4vw, 0.75rem);
+      display: block;
+    }
+    #pricing .cs-title {
+      font-size: var(--faqFontSize);
+      font-weight: 500;
+      line-height: 1.3em;
+      text-align: left;
+      max-width: 50rem;
+      margin: 0.5em auto .5em;
+      color: var(--headerColor);
+      position: relative;
+    }
+    #pricing .cs-text {
+      font-size: var(--bodyFontSize);
+      line-height: 1.5em;
+      text-align: left;
+      width: 100%;
+      max-width: 46.875rem;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+      color: var(--bodyTextColor);
+    }
+    #pricing .cs-text:last-of-type {
+      margin-bottom: 0rem;
+    }
+    #pricing .cs-flex-group {
+      /* 16px - 32px */
+      padding: clamp(1rem, 3vw, 2rem);
+      background-color: #e8e7e7;
+      border-radius: .5rem;
+      position: relative;
+    }
+    #pricing .cs-flex-p {
+      /* 14px - 16px */
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+      line-height: 1.5em;
+      margin: 0 0 1rem;
+      color: #4b4a4a;
+    }
+    #pricing .cs-name {
+      font-size: 1rem;
+      line-height: 1.2em;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 0 0 0.25rem;
+      color: var(--headerColor);
+      display: block;
+    }
+    #pricing .button-solid {
+      margin-top: 1rem;
+      border: 1px solid #16161827;
+    }
+  }
+    
+  #pricing .inside-modal {
+    margin: auto;
+    padding: clamp(1em, 1.5vw, 1em) 1rem;
+    max-width: 30.875rem;
+  }
+
+  #pricing .modal-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    row-gap: 1rem;
+    flex-direction: column;
+    }
+  
+    #pricing .modal-text {
+      font-size: var(--bodyFontSize);
+      line-height: 1.5em;
+      text-align: left;
+      width: 100%;
+      max-width: 46.875rem;
+      margin: 0 auto;
+      color: var(--bodyTextColorWhite);
+    }
+  
+    #pricing .modal-title {
+      font-size: var(--faqFontSize);
+      font-weight: 500;
+      line-height: 1.3em;
+      text-align: left;
+      max-width: 50rem;
+      margin: 0.5em auto .5em;
+      color: var(--bodyTextColorWhite);
+      position: relative;
+    }
+  
+    #pricing button {
+      font-family: "Merriweather-Sans";
+      text-transform: uppercase;
+      font-size: 1rem;
+      line-height: 2.5rem;
+      width: 9.25rem;
+      font-weight: 700;
+      color: var(--headerColor);
+      background-color: var(--primary);
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      border-radius: 0.25em;
+      border: 1px solid var(--dark);
+    }
+  
+    #pricing button:hover {
+      background-color: var(--primaryButton);
+    }
+   
+    #pricing dialog button {
+      font-size: 1rem;
+      line-height: clamp(2.5em, 5.5vw, 3em);
+      width: 9.25rem;
+      font-weight: 500;
+      color: var(--headerColor);
+      background-color: var(--primary);
+      display: inline-block;
+      position: relative;
+      margin-bottom: 0.5em;
+      z-index: 1;
+      border: none;
+      border-radius: 0.25em;
+    }
+  
+    #pricing dialog button:hover {
+      background-color: var(--primaryButton);
+    }
+  
+    #pricing dialog {
+      padding: clamp(1.5em, 1.5vw, 2em) 1.5rem;
+      margin: auto;
+      background-color: var(--light);
+      border: 1px solid var(--primary);
+      animation-name: fadeup;
+      animation-duration: 0.5s;
+    }
+  
+    dialog::backdrop {
+      background-color: #16161664;
+      background-image: linear-gradient(
+        135deg,
+        #0e0e0ebb,
+        #161616bb 40%,
+        #1c1c1cbb 70%
+      )
+    }
+  
+    dialog[open] {
+     border-radius: 0.5em;
+    }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64em) {
+    #pricing .cs-container {
+      flex-flow: row;
+      justify-content: space-around;
+      gap: 3rem;
+      padding-bottom: 3rem;
+    }
+    #pricing .cs-left {
+      font-size: min(1vw, 0.9em);
+      flex: none;
+    }
+    #pricing .cs-right {
+      margin: 0;
+    }
+  }
+
+
+
+  /* Dark Mode */
+  @media only screen and (min-width: 0em) {
+    body.dark-mode #pricing .cs-left:before,
+    body.dark-mode #pricing .cs-left:after {
+      background: var(--accent);
+    }
+    body.dark-mode #pricing .cs-picture2 {
+      background-color: var(--dark);
+      /* 6px - 12px */
+      border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
+    }
+    body.dark-mode #pricing .cs-topper {
+      color: var(--primary);
+    }
+    body.dark-mode #pricing .cs-title,
+    body.dark-mode #pricing .cs-text,
+    body.dark-mode #pricing .cs-h3,
+    body.dark-mode #pricing .cs-flex-p,
+    body.dark-mode #pricing .cs-name {
+      color: var(--bodyTextColorWhite);
+    }
+    body.dark-mode #pricing .cs-flex-group {
+      background-color: var(--medium);
+    }
+    body.dark-mode #pricing .cs-job {
+      color: var(--bodyTextColorWhite);
+      opacity: .8;
+    }
+    body.dark-mode #pricing .cs-quote-icon {
+      opacity: .2;
+    }
+  }
+
+  
+  /* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #plans {
+    /* Centers the button */
+    text-align: center;
+    padding: var(--pricingPadding);
+    padding-bottom: 2em;
+  }
+  #plans .cs-container {
+    width: 90%;
+    max-width: 69rem;
+    margin: 0 auto 2em;
+    border-bottom: 1px solid var(--headerLight);
+    padding-bottom: 4em;
+  }
+  
+  #plans .cs-left {
+    margin: auto;
+    max-width: 33.875rem;
+  }
+  #plans .cs-topperone {
+    font-size: var(--topperFontLarge);
+    font-family: "Merriweather-Sans";
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    color: var(--headerColor);
+    display: block;
+    opacity: 0.9;
+    text-decoration: none;
+  }
+  #plans .cs-topperone::after {
+    text-decoration: none;
+  }
+  #plans .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 500;
+    line-height: 1.2em;
+    text-align: center;
+    max-width: 43.75rem;
+    margin: 2rem auto 2rem;
+    color: var(--headerColor);
+    position: relative;
+  }
+  #plans .cs-card-group {
+    display: inline-block;
+    padding: 0;
+    margin: 0 auto clamp(0rem, 5vw, 0rem);
+    gap: 4rem;
+  }
+  #plans .cs-item {
+    border: clamp(1px, 1vw, 1px) solid #000000;
+    text-align: center;
+    list-style: none;
+    width: 95%;
+    max-width: 33.875rem;
+    margin: 0 auto 3rem;
+    box-shadow: rgba(0, 0, 0) 1px 1px 2px 0px;
+    border-radius: 0.5em;
+    background: #F9F8F8;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-top: 1.5em;
+    padding-right: .75em;
+    padding-left: .75em;
+    padding-bottom: 1.5em;
+  }
+  #plans .cs-item:hover {
+    background-color: var(--itemHover);
+    border: clamp(1px, 1vw, 1px) solid var(--bodyTextColor);
+    
+    transition: all 0.3s ease-in-out;
+  }
+
+  #plans .cs-item:last-of-type {
+    margin-bottom: 0;
+  }
+
+  #plans .cs-item-p {
+    font-size: .9rem;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+    padding: 1rem clamp(2rem, 3.2vw, 2rem) 0;
+    padding-bottom: clamp(1rem, 5.4vw, 1rem);
+    text-decoration: none;
+  }
+  #plans .cs-item-p::after {
+    text-decoration: none;
+  }
+  #plans .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    padding: 0rem clamp(2rem, 3.2vw, 2rem) 0;
+    text-align: left;
+    width: 100%;
+    max-width: 46.875rem;
+    color: var(--bodyTextColor);
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  #plans .cs-card-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+  }
+  #plans .cs-item {
+    /* reset margin so it won't interfere with flexbox */
+    margin: 0;
+    border: clamp(1px, 1vw, 1px) solid var(--hoverLink);
+    padding-top: 1.5em;
+    padding-right: .75em;
+    padding-left: .75em;
+    padding-bottom: 2.5em;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #plans .cs-title,
+  body.dark-mode #plans .cs-item-p,
+  body.dark-mode #plans .cs-text
+   {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #plans .cs-topperone {
+    color: var(--primary);
+    background-image: linear-gradient(90deg, #e49b2e, #ffffff);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    background-color: #ffffff;
+  }
+  }
+  body.dark-mode #plans .cs-item {
+    background: var(--medium);
+    border: clamp(1px, 1vw, 1px) solid var(--headerLight)
+  }
+  body.dark-mode #plans .cs-item:hover {
+    background: var(--dark);
+    border: clamp(1px, 1vw, 1px) solid var(--primary);
+    transition: 0.3s;
+  }
+

@@ -1,0 +1,508 @@
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #sbs {
+    padding: var(--sectionPadding);
+  }
+  #sbs .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 3.5rem;
+  }
+  #sbs .cs-left {
+    /* scaling the font size with the view width */
+    font-size: min(2vw, .6em);
+    /* using ems so we can use font size to scale the whole section */
+    width: 39.4375em;
+    height: 39.75em;
+    position: relative;
+  }
+  #sbs .cs-picture {
+    border-radius: 0.5em;
+    /* clips img tag corners */
+    overflow: hidden;
+    position: absolute;
+    display: block;
+  }
+  #sbs .cs-picture img {
+    position: absolute;
+    border-radius: .25em;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* makes image act like a background image */
+    object-fit: cover;
+  }
+  #sbs .cs-picture1 {
+    width: 32.625em;
+    height: 36.3125em;
+    background-color: #161618;
+    left: 0;
+    top: 0;
+    border: clamp(0.15em, 1vw, 0.15em) solid #161618;
+    box-shadow: rgba(0, 0, 0, 1) 1px 1px 4px 0px;
+  }
+  #sbs .cs-picture2 {
+    width: 25.875em;
+    height: 25em;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 1) 1px 1px 4px 0px;
+    background-color: #161618;
+    /* 6px - 12px */
+    border: clamp(0.20em, 1vw, 0.20em) solid #161618;
+    right: 0;
+    bottom: 0;
+  }
+  #sbs .cs-right {
+    margin: auto;
+    max-width: 33.875rem;
+  }
+  #sbs .cs-topper {
+    font-size: var(--topperFontSize);
+    font-family: "Merriweather-Sans";
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: .1em;
+    margin-bottom: clamp(0.5em, 1.4vw, 0.75rem);
+    font-weight: 500;
+    color: var(--primary);
+    display: block;
+  }
+  #sbs .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 500;
+    line-height: 1.3em;
+    text-align: left;
+    max-width: 50rem;
+    margin: .5em auto .5em;
+    color: var(--headerColor);
+    position: relative;
+  }
+  #sbs .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: left;
+    width: 100%;
+    max-width: 46.875rem;
+    margin: 0 auto 1.5rem;
+    color: var(--bodyTextColor);
+    text-decoration: none;
+  }
+    #sbs .cs-text:visited {
+    text-decoration: none;
+    color: inherit;
+    }
+  }
+  #sbs .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbs .cs-flex-group {
+    /* 16px - 32px */
+    border: clamp(1px, 1vw, 1px) solid #5151515e;
+    padding: clamp(1.75rem, 3vw, 1.75rem);
+    background-color: #f8f8f8;
+    border-radius: .5em;
+    position: relative;
+  }
+  #sbs .cs-flex-p {
+    /* 14px - 16px */
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+    line-height: 1.5em;
+    margin: 0 0 1rem;
+    color: #2e2d2d;
+  }
+  #sbs .cs-flex-p:before {
+    content: '“';
+    position: absolute;
+    margin-left: -.6em;
+  }
+  #sbs .cs-flex-p:after {
+    content:'”';
+  }
+    #sbs .cs-name {
+    font-size: var(--faqTextSize);
+    font-family: "Merriweather-Sans";
+    line-height: 1.2em;
+    text-transform: uppercase;
+    margin: 0 0 0.25rem;
+    color: var(--headerColor);
+    display: block;
+  }
+  #sbs .cs-job {
+    font-size: 0.8rem;
+    line-height: 1.5em;
+    color: #2e2d2d;
+    display: block;
+  }
+  #sbs .cs-quote-icon {
+    /* 60px - 136px */
+    width: clamp(3.75rem, 10vw, 8.5rem);
+    height: auto;
+    position: absolute;
+    bottom: 0rem;
+    /* 16px - 32px */
+    right: clamp(1rem, 4vw, 2rem);
+  }
+  #sbs .button-solid {
+    margin-top: 2rem;
+    box-shadow: rgba(0, 0, 0) 1px 1px 1px 0px;
+  }
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64em) {
+  #sbs .cs-container {
+    flex-flow: row;
+    justify-content: space-between;
+    gap: 3.25rem;
+    padding-bottom: 3rem;
+  }
+  #sbs .cs-left {
+    font-size: min(1.2vw, 1em);
+    flex: none;
+  }
+  #sbs .cs-right {
+    margin: 0;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #sbs .cs-left:before,
+  body.dark-mode #sbs .cs-left:after {
+    background: var(--accent);
+  }
+  body.dark-mode #sbs .cs-picture2 {
+    background-color: var(--dark);
+    /* 6px - 12px */
+    border: clamp(0.2em, 1vw, 0.2em) solid #161618;
+  }
+  body.dark-mode #sbs .cs-topper {
+    color: var(--primary);
+  }
+  body.dark-mode #sbs .cs-title,
+  body.dark-mode #sbs .cs-text,
+  body.dark-mode #sbs .cs-h3,
+  body.dark-mode #sbs .cs-flex-p,
+  body.dark-mode #sbs .cs-name {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #sbs .cs-flex-group {
+    background-color: var(--medium);
+  }
+  body.dark-mode #sbs .cs-job {
+    color: var(--bodyTextColorWhite);
+    opacity: .8;
+  }
+  body.dark-mode #sbs .cs-quote-icon {
+    opacity: .2;
+  }
+}
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #sbs-r {
+    padding: var(--sectionPadding);
+  }
+  #sbs-r .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 3.5rem;
+  }
+  #sbs-r .cs-left {
+    /* scaling the font size with the view width */
+    font-size: min(2vw, .6em);
+    /* using ems so we can use font size to scale the whole section */
+    width: 39.4375em;
+    height: 39.75em;
+    position: relative;
+  }
+  #sbs-r .cs-picture {
+    border-radius: 0.5em;
+    /* clips img tag corners */
+    overflow: hidden;
+    position: absolute;
+    display: block;
+  }
+  #sbs-r .cs-picture img {
+    position: absolute;
+    border-radius: 0.25em;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* makes image act like a background image */
+    object-fit: cover;
+  }
+  #sbs-r .cs-picture1 {
+    width: 32.625em;
+    height: 36.3125em;
+    right: 0;
+    top: 0;
+    background-color: #161618;
+    border: clamp(0.15em, 1vw, 0.15em) solid #161618;
+    box-shadow: rgba(0, 0, 0, 1) 1px 1px 4px 0px;
+  }
+  #sbs-r .cs-picture2 {
+    width: 25.875em;
+    height: 25em;
+    background-color: #161618;
+    box-shadow: rgba(0, 0, 0, 1) 1px 1px 4px 0px;
+    /* 6px - 12px */
+    border: clamp(0.2em, 1vw, 0.2em) solid #161618;
+    left: 0;
+    bottom: 0;
+  }
+  #sbs-r .cs-right {
+    margin: auto;
+    max-width: 33.875rem;
+  }
+  #sbs-r .cs-topper {
+    font-size: var(--topperFontSize);
+    font-family: "Merriweather-Sans";
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: .1em;
+    font-weight: 500;
+    margin-bottom: clamp(0.5rem, 1.4vw, 0.75rem);
+    color: var(--primary);
+    display: block;
+  }
+  #sbs-r .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 500;
+    line-height: 1.3em;
+    text-align: left;
+    max-width: 50rem;
+    margin: .5em auto .5em;
+    color: var(--headerColor);
+    position: relative;
+  }
+  #sbs-r .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: left;
+    width: 100%;
+    max-width: 46.875rem;
+    margin: 0 auto 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--bodyTextColor);
+  }
+  #sbs-r .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbs-r .cs-flex-group {
+    /* 16px - 32px */
+    padding: clamp(1rem, 3vw, 2rem);
+    background-color: #F7F7F7;
+    border-radius: 0.5em;
+    position: relative;
+  }
+  #sbs-r .cs-flex-p {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    margin: 0 0 1rem;
+    color: #767676;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64em) {
+  #sbs-r .cs-container {
+    flex-flow: row;
+    justify-content: space-between;
+    gap: 3.25rem;
+  }
+  #sbs-r .cs-left {
+    font-size: min(1.2vw, 1em);
+    flex: none;
+    /* sends it to the right */
+    order: 2;
+  }
+  #sbs-r .cs-right {
+    margin: 0;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #sbs-r .cs-left:before,
+  body.dark-mode #sbs-r .cs-left:after {
+    background: var(--accent);
+  }
+  body.dark-mode #sbs-r .cs-picture2 {
+    background-color: var(--dark);
+    /* 6px - 12px */
+    border: clamp(0.2em, 1vw, 0.2em) solid #161618;
+  }
+  body.dark-mode #sbs-r .cs-topper {
+    color: var(--primary);
+  }
+  body.dark-mode #sbs-r .cs-title,
+  body.dark-mode #sbs-r .cs-text,
+  body.dark-mode #sbs-r .cs-h3,
+  body.dark-mode #sbs-r .cs-flex-p,
+  body.dark-mode #sbs-r .cs-name {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #sbs-r .cs-flex-group {
+    background-color: var(--accent);
+  }
+  body.dark-mode #sbs-r .cs-job {
+    color: var(--bodyTextColorWhite);
+    opacity: .8;
+  }
+  body.dark-mode #sbs-r .cs-quote-icon {
+    opacity: .2;
+  }
+}
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #collaborate {
+    /* Centers the button */
+    text-align: center;
+    padding: var(--sectionPadding);
+  }
+  #collaborate .cs-container {
+    width: 100%;
+    max-width: 69rem;
+    margin: auto;
+    padding-top: 3rem;
+    padding-bottom: 0em;
+    border-top: 1px solid #ebebeb;
+  }
+  #collaborate .cs-left {
+    margin: auto;
+    max-width: 33.875rem;
+  }
+  #collaborate .cs-topperone {
+    font-size: var(--topperFontSize);
+    font-family: "Merriweather-Sans";
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    color: var(--headerColor);
+    display: block;
+    opacity: 0.9;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-decoration: none;
+  }
+  #collaborate .cs-topperone::after {
+    text-decoration: none;
+  }
+  #collaborate .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 500;
+    line-height: 1.2em;
+    text-align: center;
+    max-width: 43.75rem;
+    margin: 2rem auto 2rem;
+    color: var(--headerColor);
+    position: relative;
+  }
+  #collaborate .cs-card-group {
+    padding: 0;
+    margin: 0 auto clamp(3rem, 5vw, 2rem);
+  }
+  #collaborate .cs-item {
+    border: clamp(1px, 1vw, 1px) solid #b6b6b6;
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    max-width: 33.875rem;
+    margin: 0 auto 1.5rem;
+    box-shadow: rgba(0, 0, 0) 1px 1px 2px 0px;
+    border-radius: 0.5em;
+    background: #F9F8F8;
+    position: relative;
+    justify-content: space-between;
+    overflow: hidden;
+    flex-wrap: wrap;
+    align-items: center;
+    box-sizing: border-box;    
+  }
+
+  #collaborate .cs-item:last-of-type {
+    margin-bottom: 0;
+  }
+  #collaborate .cs-item-img {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: -2.5rem;
+  }
+  #collaborate .cs-item-p {
+    font-size: .9rem;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+    padding: 1rem clamp(2rem, 3.2vw, 2rem) 0;
+    padding-bottom: clamp(1rem, 5.4vw, 1rem);
+    text-decoration: none;
+  }
+  #collaborate .cs-item-p::after {
+    text-decoration: none;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  #collaborate .cs-card-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+  }
+  #collaborate .cs-item {
+    /* reset margin so it won't interfere with flexbox */
+    margin: 0;
+    border: clamp(1px, 1vw, 1px) solid var(--hoverLink)
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #collaborate .cs-title,
+  body.dark-mode #collaborate .cs-item-p,
+  body.dark-mode #collaborate .cs-topperone
+   {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #collaborate .cs-topperone {
+    color: var(--primaryShade);
+    background-image: linear-gradient(45deg, #ffffff, #fff6eb);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+  }
+  body.dark-mode #collaborate .cs-item:hover {
+    background: var(--dark);
+    border: clamp(1px, 1vw, 1px) solid var(--primary);
+    transition: 0.3s;
+  }
+  body.dark-mode #collaborate .cs-item {
+    background: var(--medium);
+    border: clamp(1px, 1vw, 1px) solid var(--headerLight)
+  }
+  .dark-mode #collaborate .cs-container {
+    border-top: 1px solid var(--headerLight);
+    
+  }
+}

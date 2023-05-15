@@ -1,0 +1,604 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #hero {
+    font-family: 'Merriweather-Light', 'Arial', sans-serif;
+    text-align: center;
+    padding: 0 1rem;
+    padding-bottom: 10.50rem;
+    padding-top: 2.25rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-color: var(--dark);
+    background-image: linear-gradient(to right, #111111, #161616)
+  }
+  #hero .cs-picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+  #hero .sun {
+    position: absolute;
+    top: 15%;
+    width: 150%;
+    animation: scale 5s linear infinite;
+    opacity: 1;
+    transition-delay: .5s;
+    transition: opacity 0.5s linear;
+  }
+  #shine {
+    animation: twinkle 4s linear infinite;
+    transition-delay: .5s;
+  }
+  #hero .star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    animation: twinkle 2s ease-in-out infinite;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  @keyframes scale {
+    0% {
+      transform: scale(.9);
+    }
+    25% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  75% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(.9);
+    }
+  }
+
+  @keyframes twinkle {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes move {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(50px, -30px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes move1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(30px, 62px);
+    }
+}
+
+@keyframes move2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(71px, -40px);
+    }
+}
+
+@keyframes move3 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-40px, -11px);
+    }
+}
+
+@keyframes move4 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-76px, -50px);
+    }
+}
+#herostar .star:nth-child(1) {
+    top: 24%;
+    left: 15%;
+    animation: move 10s ease-in-out infinite alternate 0.5s;
+    
+  }
+  
+  #herostar .star:nth-child(2) {
+    top: 16%;
+    left: 70%;
+    animation: move1 9s ease-in-out infinite alternate 1s;
+  }
+  
+  #herostar .star:nth-child(3) {
+    top: 71%;
+    left: 47%;
+    animation: move2 14s ease-in-out infinite alternate .5s;
+  }
+  
+  #herostar .star:nth-child(4) {
+    top: 47%;
+    left: 71%;
+    animation: move3 6s ease-in-out infinite alternate 1s;
+  }
+  
+  #herostar .star:nth-child(5) {
+    top: 69%;
+    left: 82%;
+    animation: move4 5s ease-in-out infinite alternate 0s;
+  }
+  
+  #herostar .star:nth-child(6) {
+    top: 59%;
+    left: 22%;
+    animation: move2 12s ease-in-out infinite alternate 1s;
+  }
+  
+  #herostar .star:nth-child(7) {
+    top: 83%;
+    left: 15%;
+    animation: move 10s ease-in-out infinite alternate 0s;
+  }
+  @media (max-width: 768px) {
+    #herostar .star {
+      position: absolute;
+    max-width: 3%;
+    height: 10px;
+    }
+    #herostar .star:nth-child(1) {
+      top: 12%;
+      left: 15%;
+      animation: move1 6s ease-in-out infinite alternate;
+    }
+  
+    #herostar .star:nth-child(2) {
+      top: 15%;
+      left: 83%;
+      animation: move2 9s ease-in-out infinite alternate;
+    }
+  
+    #herostar .star:nth-child(3) {
+      top: 85%;
+      left: 60%;
+      animation: move3 7s ease-in-out infinite alternate;
+    }
+  
+    #herostar .star:nth-child(4) {
+      top: 64%;
+      left: 80%;
+      animation: move4 12s ease-in-out infinite alternate;
+    }
+  
+    #herostar .star:nth-child(5) {
+      top: 71%;
+      left: 10%;
+      animation: move1 8s ease-in-out infinite alternate;
+    }
+  
+    #herostar .star:nth-child(6) {
+      top: 60%;
+      left: 10%;
+      animation: move2 9s ease-in-out infinite alternate;
+    }
+  
+    #herostar .star:nth-child(7) {
+      top: 84%;
+      left: 50%;
+      animation: move3 2s ease-in-out infinite alternate;
+    }
+  }
+  #hero .cs-picture:before {
+    /* Black Color Overlay */
+    content: '';
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* prevents the cursor from interacting with it */
+    pointer-events: none;
+  }
+  #hero .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes image act like a background-image */
+    object-fit: cover;
+  }
+  #hero .cs-container {
+    width: 100%;
+    max-width: 80em;
+    /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
+    /* 144px - 280px - leaving extra space for the navigation */
+    /* changes on tablet */
+    padding: clamp(13em, 25.95vw, 17.5em) 0;
+    margin: auto;
+    position: relative;
+  }
+  #hero .cs-subcontainer {
+    width: 100%;
+    max-width: 80em;
+    /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
+    /* 144px - 280px - leaving extra space for the navigation */
+    /* changes on tablet */
+    padding: clamp(0em, 3vw, 0em) 4em;
+    margin: auto;
+    position: relative;
+    margin-bottom: 6em;
+  }
+  #hero svg {
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    margin-top: .25em;
+  }
+  #hero .cs-container:before {
+    /* Left Line */
+    content: '';
+    width: 1px;
+    height: 100%;
+    background: -moz-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    opacity: 0;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+  }
+  #hero .cs-flex-group {
+    /* 60px - 220px */
+    margin-bottom: clamp(3.75em, 15.5vw, 13.75em);
+    margin: auto;
+    width: 80vw;
+    /* 464px - 562px */
+    max-width: clamp(60em, 60vw, 60em);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  #hero .cs-topper {
+    /* 13px - 16px */
+    font-family: 'Merriweather-Sans';
+    font-size: clamp(0.8rem, 1vw, 1.2rem);
+    line-height: 1.5em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.25em;
+    font-weight: 500;
+    color: var(--primary);
+    display: block;
+    padding-bottom: 1.75rem;
+    background-image: linear-gradient(90deg, #ffce85, #ffb648);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    background-color: #ffffff;
+  }
+  #hero .cs-title {
+    /* 39px - 61px */
+    font-size: clamp(2.7rem, 6vw, 4.7rem);
+    font-weight: 500;
+    line-height: 1.2em;
+    text-align: center;
+    width: 100%;
+    /* 32px - 40px */
+    margin: 0 auto clamp(1.2rem, 3vw, 1.3rem) 0;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+  }
+  #hero .cs-subtitle {
+    font-family: 'Merriweather-Sans';
+    text-transform: uppercase;
+    font-size: clamp(.8rem, 3.5vw, 1rem);
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    line-height: 1.5em;
+    text-align: center;
+    width: 100%;
+    /* 32px - 40px */
+    color: var(--bodyTextColorWhite);
+    position: relative;
+    background-image: linear-gradient(90deg, #ffcd82, #ffba58);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    background-color: #ffffff;
+  }
+  #hero .cs-text {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 1.95vw, 1.25rem);
+    line-height: 1.5em;
+    text-align: center;
+    width: 100%;
+    /* 32px - 40px */
+    margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+    /* 40px - 48px */
+    margin-bottom: clamp(2.5rem, 4vw, 3rem);
+    color: var(--bodyTextColorWhite);
+  }
+  #hero .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    width: 11.25rem;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 0.5rem 1rem 0.5rem;
+    color: var(--headerColor);
+    padding: 0;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color .3s;
+    box-shadow: rgba(0, 0, 0) 2px 2px 2px 0px;
+  }
+  #hero .cs-button-solid:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width .3s;
+  }
+  #hero .cs-button-solid:hover {
+    color: var(--bodyTextColorWhite);
+  }
+  #hero .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #hero .cs-button-transparent {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    width: 11.25rem;
+    /* 46px - 56px */
+    height: clamp(2.875em, 5.5vw, 3.5em);
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 0.5rem;
+    color: #fff;
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid var(--bodyTextColorWhite);
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #hero .cs-button-transparent:before {
+    content: '';
+    position: absolute;
+    display: block;
+    background: #000;
+    opacity: 1;
+    /* so it sits on top of the border */
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    z-index: -1;
+    transform-origin: left;
+    /* this is what creates the grow affect on hover */
+    transform: scaleX(0);
+    transition: transform .3s;
+  }
+  #hero .cs-button-transparent:hover:before {
+    transform: scaleX(1);
+  }
+  #hero .cs-button-transparent .cs-img {
+    display: block;
+    margin-right: 0.75rem;
+  }
+  #hero .cs-hero-button {
+    padding-top: 1rem;
+    column-gap: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48em) {
+  #hero {
+    /* 32px - 40px */
+    padding: 0 clamp(2em, 5vw, 2.5em);
+  }
+  #hero .cs-container {
+    padding: clamp(6em, 27.95vw, 19em) 0 clamp(9em, 30.95vw, 17.5em) 0;
+  }
+  #hero .cs-container:after {
+    /* Right Line */
+    content: '';
+    width: 1px;
+    height: 100%;
+    background: -moz-linear-gradient(top, rgba(250, 251, 252, 0) 0%, rgb(255, 212, 40) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0) 0%, rgba(250, 251, 252, 0.5) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    opacity: 0;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+  }
+  #hero .cs-button-solid {
+    margin-bottom: 0;
+    margin-right: 1.25rem;
+  }
+}
+/* Desktop Parallax Effect - 1300px */
+@media only screen and (min-width: 81.25em) {
+  #hero {
+    background-color: var(--dark);
+    background-image: linear-gradient(to right, #111111, #161616);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* creates parallax effect on background image */
+    background-attachment: fixed;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #hero .cs-background:before {
+    opacity: 1;
+    
+  }
+  body.dark-mode  #hero .star {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  body.dark-mode #hero .sun {
+  opacity: 0;
+  transition-delay: .5s;
+  transition: opacity 0.2s linear;
+}
+
+}
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  .services {
+    border-radius: 0.5em;
+    margin: auto;
+    margin-top: -16.4375em;
+    position: relative;
+    z-index: 100;
+    background: #fff;
+    width: 20em;
+    max-width: 82.5em;
+    padding: 3.5em 2.5em;
+    border-top: 0.25em solid var(--primary);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px 1px;
+    margin-bottom: 3.125em;
+  }
+  
+  .services .card {
+    display: block;
+    width: 100%;
+    max-width: 22.3125em;
+    margin: auto;
+    margin-bottom: 3.125em;
+  }
+  .services .card:last-of-type {
+    margin-bottom: 0;
+  }
+  .services .card picture {
+    background: var(--primarySVG);
+    width: 3.5em;
+    height: 3.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 1.4375em;
+    border-radius: 1em;
+    border: 1px solid #16161827;
+  }
+  .services .card picture img {
+    width: 2em;
+    height: 2em;
+  }
+  .services .card h2 {
+    font-family: "Merriweather-Sans-Light";
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 0.65em;
+  }
+  .services .card p {
+    text-align: center;
+    line-height: 1.4em;
+    width: 100%;
+    opacity: .8;
+    font-size: .9em;
+  }
+}
+/* Inbetween */
+@media only screen and (min-width: 768px) {
+  .services {
+    font-size: min(1.8vw, 1em);
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    align-items: flex-start;
+    width: 75%;
+    margin-top: -6em;
+  }
+  .services .card {
+    margin: 0;
+    max-width: 20.3125em;
+  }
+}
+/* Large Desktop */
+@media only screen and (min-width: 1300px) {
+  .services {
+    padding: 3.125em 5em;
+  }
+  .services .card {
+    max-width: 22.3125em;
+  }
+}
+/* Dark mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #services {
+    background: var(--medium);
+  }
+  body.dark-mode #services picture {
+    background: var(--primaryDark);
+  }
+  body.dark-mode #services h2 {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+}

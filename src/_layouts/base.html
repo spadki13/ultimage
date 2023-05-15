@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="canonical" href="https://{{ client.domain }}{{ page.url }}" />
+
+    <meta name="description" content="{{ description }}" />
+    <meta name="keywords" content="" />
+
+    <meta property="og:title" content="{{ metaTitle }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://{{ client.domain }}{{ page.url }}"
+    />
+    <meta property="og:image" content="/images/social.jpg" />
+    <meta property="og:image:secure_url" content="/images/social.jpg" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicons/f180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicons/f32.png?v1"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicons/f16.png"
+    />
+    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="preload" as="image" href="/assets/images/darklogo7.svg" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff"
+      href="/assets/fonts/MerriweatherSansLight.woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff"
+      href="/assets/fonts/MerriweatherLight.woff"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="/css/root.css" />
+    <link rel="stylesheet" href="/css/dark.css" />
+
+    <link rel="preload" as="image" href="{{ preloadImg }}" />
+
+    <link rel="stylesheet" href="/css/critical.css" />
+    <link rel="stylesheet" href="{{ preloadCSS }}" />
+
+    <!--Analytics Tag Here-->
+
+    <title>
+      {% if page.url == '/'%} {{ client.name }} | {{ tagTitle }} | {{ "Sydney"
+      }} | {% else %} {{ tagTitle }} | {{ client.name }} {% endif %}
+    </title>
+  </head>
+  <body>
+    <a class="skip" aria-label="skip to main content" href="#main"
+      >Click To Skip To Main Content</a
+    >
+
+    {% include "header.html" %}
+    <main id="main">{{ content | safe }}</main>
+    {% include "footer.html" %}
+
+    <script defer src="/assets/js/nav.js"></script>
+    <script defer src="/assets/js/dark.js"></script>
+    <script defer src="/assets/js/modal.js"></script>
+    <script defer>
+      document.addEventListener("scroll", (e) => {
+        const scroll = document.documentElement.scrollTop;
+        if (scroll >= 100) {
+          document.querySelector("body").classList.add("scroll");
+        } 
+      });
+    </script>
+  </body>
+</html>
