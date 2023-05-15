@@ -65,12 +65,12 @@
   }
 
   @font-face {
-    font-family: 'Inter';
+    font-family: 'Lato';
     font-style: normal;
     font-weight: 500;
-    src: local(''), url('/assets/fonts/Inter-Regular.woff') format('woff'),
+    src: local(''), url('/assets/fonts/Lato-Regular.ttf') format('ttf'),
       /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('/assets/fonts/Inter-Regular.woff') format('woff');
+      url('/assets/fonts/Lato-Regular.ttf') format('ttf');
   }
 
   body,
@@ -112,11 +112,11 @@
   }
 
   h2 {
-    font-family: "Merriweather";
+    font-family: "Lato";
   }
 
   h1 {
-    font-family: "Merriweather-Light";
+    font-family: "Lato";
     font-weight: 500;
   }
 
